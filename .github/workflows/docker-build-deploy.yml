@@ -43,6 +43,8 @@ jobs:
       - name: SSH into server and pull image
         uses: appleboy/ssh-action@master
         with:
+          run: |
+            echo ${{ vars.SERVER_HOST }}
           host: ${{ vars.SERVER_HOST }}
           username: ${{ vars.SERVER_USER }}
           password: ${{ vars.SSH_PASSWORD }}
