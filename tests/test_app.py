@@ -1,4 +1,4 @@
-from telegram_bot.app import App
+from telegram_llm_streaming.app import App
 
 
 def test_run():

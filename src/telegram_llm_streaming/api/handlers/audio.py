@@ -1,7 +1,7 @@
 import logging
 import os
-from telegram_bot.db import crud
-from telegram_bot.service.app import App
+from telegram_llm_streaming.db import crud
+from telegram_llm_streaming.service.app import App
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

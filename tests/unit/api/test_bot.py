@@ -1,4 +1,4 @@
-from telegram_bot.src.telegram_bot.api import bot
+from telegram_llm_streaming.src.telegram_bot.api import bot
 
 def test_send_welcome(mocker):
     # Arrange
