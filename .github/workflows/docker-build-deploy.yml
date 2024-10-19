@@ -45,7 +45,7 @@ jobs:
         with:
           host: ${{ vars.SERVER_HOST }}
           username: ${{ vars.SERVER_USER }}
-          key: ${{ vars.SSH_PRIVATE_KEY }}
+          password: ${{ vars.SSH_PASSWORD }}
           script: |
             current_container=$(docker ps --filter "ancestor=${{ vars.DOCKERHUB_USERNAME }}/telegram_llm_streaming:latest" --format "{{.Names}}")
             if [ -n "$current_container" ]; then
