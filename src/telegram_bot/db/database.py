@@ -24,8 +24,10 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 # Check if any of the required environment variables are not set
 if not all([DB_HOST, DB_NAME, DB_USER, DB_PASSWORD]):
-    logger.error("One or more database environment variables are not set.")
-    exit(1)
+    logger.warning("One or more database environment variables are not set.")
+    db_avaliable = False
+    
+db_avaliable = True
 
 # Construct the database URL
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?sslmode=require"
